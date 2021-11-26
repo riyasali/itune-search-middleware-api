@@ -1,19 +1,39 @@
 {
-  "compilerOptions": {
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": { "*": ["types/*"] },
+      "sourceMap": true,
+      "target": "es6",
       "module": "commonjs",
       "moduleResolution": "node",
-      "sourceMap": false,
-      "target": "es6",
-      "outDir": "./dist",
-      "baseUrl": "./src",
-      "declaration": true,
-      "types": [ "node"],
-      "esModuleInterop": true
-  },
-  "include": [
-      "src/**/*.ts"
-  ],
-  "exclude": [
-      "node_modules"
-  ]
-}
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "rootDir": "./src",
+      "outDir": "./dist/",
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "lib": [
+        "es5",
+        "es6",
+        "dom",
+        "es2015.core",
+        "es2015.collection",
+        "es2015.generator",
+        "es2015.iterable",
+        "es2015.promise",
+        "es2015.proxy",
+        "es2015.reflect",
+        "es2015.symbol",
+        "es2015.symbol.wellknown",
+        "esnext.asynciterable"
+      ]
+    },
+    "exclude": [
+      "node_modules",
+      "build",
+      "src/**/*.test.ts",
+      "src/**/*.e2e.ts",
+      "test"
+    ]
+  }
+  
